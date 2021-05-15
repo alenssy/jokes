@@ -1,0 +1,103 @@
+h1
+    margin-bottom: 0
+
+h3
+    text-transform: uppercase 
+    margin-top: 0
+    margin-bottom: to-rem(75)
+    
+li
+    list-style-type: none
+
+.joke
+    &__form
+        width: 100%
+        display: flex
+        flex-direction: column
+        margin: to-rem(40) 0
+    &__category
+        input
+            display: none
+        input:checked + span
+            cursor: pointer
+            color: $black
+            background-color: $bg_grey
+        & > span
+            display: block
+            color: $dark_grey
+            font-size: 12px
+            font-weight: 500
+            letter-spacing: 2px
+            text-transform: uppercase
+            text-align: center
+            background: #ffffff
+            padding: to-rem(6) to-rem(15)
+            margin: to-rem(5)
+            border: 1px solid $bg_grey
+            border-radius: 6px
+            transition: 0.2s
+            &:hover
+                cursor: pointer
+                color: $black
+                background-color: $bg_grey
+    &__type
+        font-size: 18px
+        position: relative
+        margin: to-rem(10) to-rem(25)
+        & > input[type="radio"]
+            position: absolute
+            left: to-rem(-30)
+
+
+
+.subtitle
+    font-weight: 500
+    margin-top: to-rem(5)
+
+.form__block
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.category
+    &__list
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        padding: 0
+        margin: 0
+    &__block
+        display: none
+
+.btn__submit
+    cursor: pointer
+    max-width: to-rem(152)
+    font-weight: 700
+    color: #ffffff
+    background: linear-gradient(90.55deg, #8EA7FF 0%, #7291FF 100%)
+    padding: to-rem(10) to-rem(25)
+    margin-top: to-rem(20)
+    border: 0
+    border-radius: 10px
+    transition: 0.2s
+    &:hover
+        background: linear-gradient(90.55deg, #8EA7FF 0%, #6f8bee 100%)
+    &:active
+        background: linear-gradient(90.55deg, #8EA7FF 0%, #6884e9 100%)
+
+.input
+    &__search
+        display: none
+        color: $black
+        font-size: 16px
+        padding: to-rem(5) to-rem(15)
+        margin-top: to-rem(10)
+        border: 2px solid $dark_grey
+        border-radius: 10px
+        &::placeholder
+            color: $dark_grey
+            font-size: 16px
+        &:focus
+            outline: none        
+            border: 2px solid $black
